@@ -1,103 +1,93 @@
+**Memory Game**
+================
 
-# Flag Memory Card Game
+A memory game built with HTML, CSS, and JavaScript. This game features a 4x4 grid of cards with random emojis. The goal of the game is to find all the matching pairs of emojis by flipping the cards. The game keeps track of the number of moves and time taken to complete the game.
 
-A brief description of what this project does and who it's for
+**Design Features**
+-----------------
 
+### Colors
 
-## Acknowledgements
+* Primary color: `#779fa1`
+* Secondary color: `#282A3A`
+* Accent color: `#7303c0`
+* Background color: `#FDF8E6`
 
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+### Typography
 
+* Font family: Arial, Helvetica, sans-serif
+* Font sizes:
+	+ Header: 18pt
+	+ Body: 14pt
+	+ Button: 18pt
 
-## Appendix
+### Layout
 
-Any additional information goes here
+* The game board is a 4x4 grid of cards, with a gap of 20px between each card.
+* The cards are positioned absolutely, with a width and height of 100px.
+* The game container is centered horizontally and vertically on the page.
 
+**Technical Details**
+--------------------
 
-## Authors
+* Built with HTML, CSS, and JavaScript.
+* Uses CSS Grid for layout and styling.
+* JavaScript is used for game logic and event handling.
+* The game uses a Fisher-Yates shuffle algorithm to randomize the card order.
 
-- [@octokatherine](https://www.github.com/octokatherine)
+**Bug Fixing**
+-------------
 
-## Color Reference
+* Fixed issue with cards not flipping back when no match is found.
+* Fixed issue with timer not resetting when game is restarted.
+* Fixed issue with win screen not displaying correctly.
 
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Example Color | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) #0a192f |
-| Example Color | ![#f8f8f8](https://via.placeholder.com/10/f8f8f8?text=+) #f8f8f8 |
-| Example Color | ![#00b48a](https://via.placeholder.com/10/00b48a?text=+) #00b48a |
-| Example Color | ![#00d1a0](https://via.placeholder.com/10/00b48a?text=+) #00d1a0 |
+**Testing**
+---------
 
+* Tested on Chrome, Firefox, and Safari browsers.
+* Tested on desktop and mobile devices.
+* Tested for accessibility using WAVE Web Accessibility Evaluation Tool.
 
-## Demo
+**Game Components**
+-------------------
 
-Insert gif or link to demo
+### CSS
 
+The CSS code defines the layout and styling of the game. Here are some key components:
 
-## Deployment
+* The `body` tag has a width and height of 100%, a background color of `#779fa1`, and overflow is hidden.
+* The `.game` class is positioned absolutely with a top of 60%, left of 50%, and transform of translate(-50%, -50%).
+* The `.welcome-box` class has a white background, padding of 20px, border-radius of 10px, box-shadow of 0 0 10px rgba(0, 0, 0, 0.1), text-align of center, and margin of 20px auto.
 
-To deploy this project run
+### JavaScript
 
-```bash
-  npm run deploy
-```
+The JavaScript code defines the game logic and event handling. Here are some key components:
 
+* The `selectors` object contains references to various HTML elements on the page.
+* The `state` object contains five state properties: `gameStarted`, `flippedCards`, `totalFlips`, `totalTime`, and `loop`.
+* The `shuffle` function takes an array as an argument and returns a shuffled version of the array using the Fisher-Yates shuffle algorithm.
+* The `pickRandom` function takes an array and a number as arguments and returns a new array with the specified number of random elements from the original array.
+* The `generateGame` function generates the game board by creating a 4x4 grid of cards with random emojis.
+* The `startGame` function sets the `gameStarted` state property to true, toggles the disabled class on the start button, sets up an interval to update the moves and timer, and initializes the game.
+* The `flipBackCards` function removes the flipped class from all unmatched cards and resets the `flippedCards` state property to zero.
+* The `flipCard` function toggles the flipped class on a card, updates the `flippedCards` and `totalFlips` state properties, checks for a match, and updates the moves and timer.
 
-## Documentation
+**Getting Started**
+-------------------
 
-[Documentation](https://linktodocumentation)
+1. Open the `index.html` file in a web browser to play the game.
+2. Click on a card to start playing.
 
+**License**
+---------
 
-## Features
+This project is licensed under the MIT License. See `LICENSE` for details.
 
-- Light/dark mode toggle
-- Live previews
-- Fullscreen mode
-- Cross platform
+**Author**
+-------
 
-
-## 🚀 About Me
-I'm a full stack developer...
-
-
-## 🔗 Links
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherineoelsner.com/)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
-[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
-
-
-## Roadmap
-
-- Additional browser support
-
-- Add more integrations
-
-
-## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
-
-## Support
-
-For support, email fake@fake.com or join our Slack channel.
-
-
-## Tech Stack
-
-**Client:** React, Redux, TailwindCSS
-
-**Server:** Node, Express
-
-
-## Running Tests
-
-To run tests, run the following command
-
-```bash
-  npm run test
-```
+[Your Name]
 
 ## Running Tests
 
