@@ -15,7 +15,49 @@ body {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px; /* adjust the height as needed */
+  background-color: #E0CBA8;
+  border-bottom: 1px solid #E0CBA8;
   text-align: center;
+  padding: 10px;
+  z-index: 1; /* to ensure it's on top of other elements */
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background-color: #E0CBA8;
+  border-top: 1px solid #E0CBA8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-content a {
+  color: #337ab7;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-content a:hover {
+  color: #23527c;
+}
+
+.fa {
+  margin-right: 10px;
 }
 
 
@@ -28,15 +70,6 @@ header {
 
 .welcome-box p {
   margin-bottom: 10px;
-}
-
-.welcome-box {
-  background-color: #E0CBA8; /* tomato background */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center; /* center the text */
-  margin: 20px auto; /* center the div horizontally */
 }
 
 .hello {
