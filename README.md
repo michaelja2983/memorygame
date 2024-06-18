@@ -3,15 +3,18 @@
 
 A memory game built with HTML, CSS, and JavaScript. This game features a 4x4 grid of cards with random emojis. The goal of the game is to find all the matching pairs of emojis by flipping the cards. The game keeps track of the number of moves and time taken to complete the game.
 
+![Game Preview](/assets/images/game.JPG)
+
 **Design Features**
 -----------------
 
 ### Colors
 
-* Primary color: `#779fa1`
-* Secondary color: `#282A3A`
-* Accent color: `#7303c0`
-* Background color: `#FDF8E6`
+![Color Palate](/assets/images/colorpalate.JPG)
+
+* Primary color: `#88498F`
+* Secondary color: `#E0CBA8`
+* Background color: `779FA1`
 
 ### Typography
 
@@ -38,9 +41,8 @@ A memory game built with HTML, CSS, and JavaScript. This game features a 4x4 gri
 **Bug Fixing**
 -------------
 
-* Fixed issue with cards not flipping back when no match is found.
-* Fixed issue with timer not resetting when game is restarted.
-* Fixed issue with win screen not displaying correctly.
+* During testing a bug was apparant. On testing code only 5 available emoji pairs were displaying. On reviewing code it was apparant that I had not added the generated HTML code to the page and had created the HTML structure as a string, but had not appended it to the DOM. The fix applied was modyfing the `generateGame` function to apped the generated HTML to the `boardContainer` element.
+* There was also an apparant issue with the const pickRandom function and an update was required to ensure that the `pick` array will always contain the required number of unquie emojis which results in the correct number of cards being generated.
 
 **Testing**
 ---------
@@ -48,6 +50,16 @@ A memory game built with HTML, CSS, and JavaScript. This game features a 4x4 gri
 * Tested on Chrome, Firefox, and Safari browsers.
 * Tested on desktop and mobile devices.
 * Tested for accessibility using WAVE Web Accessibility Evaluation Tool.
+
+| Test Completed |  Expected Result  | Actual Result |
+|:--------------:|:-----------------:|--------------:|
+| Page Load   			 | Page loads with 16 black cards, start button visable 		 | 18/06/2024 Page loads, 16 blank cards, start button visable.		 |
+| Start Button works correctly   			 |  On pressing start the time stars to increase		 |   18/06/2024 on pressing start button the timer starts to increase time 		 |
+| On clicking on cards, each card flips with unique emojia  			 | All cards flips on clicking with unique emoji pairs	 |    18/06/2024, each card is clickable, which seperate emojia pairs		 |
+| When clicking two different types of emoji's the card flip back	 | When two cards are selected if they do not match the cards flip back to blank		 | 18/06/2024 When clicking opposing emojis the cards both flip back to blank. |
+| When clicking on matching pairs, the cards do not flip back over and stay visable.	 |  When matching two cards, they both stay visable.	 |   18/06/2024 When matching two cards they do both stay visable to the user. |
+| On clicking on cards, each card flips with unique emojia  			 | All cards flips on clicking with unique emoji pairs	 |    18/06/2024, each card is clickable, which seperate emojia pairs		 |
+| On completion of the game the card deck flips with winning statistics 			 | On completion of matching all pairs, the entire deck should flip revieling	 |    18/06/2024, on completion of the game the card deck flips.	 |
 
 **Game Components**
 -------------------
@@ -87,10 +99,9 @@ This project is licensed under the MIT License. See `LICENSE` for details.
 **Author**
 -------
 
-[Your Name]
+![Mike Anning](https://www.linkedin.com/in/michael-anning-855742239/)
 
 ## Running Tests
 
-During testing a bug was apparant. On testing code only 5 available emoji pairs were displaying. On reviewing code it was apparant that I had not added the generated HTML code to the page and had created the HTML structure as a string, but had not appended it to the DOM. The fix applied was modyfing the `generateGame` function to apped the generated HTML to the `boardContainer` element.
-There was also an apparant issue with the const pickRandom function and an update was required to ensure that the `pick` array will always contain the required number of unquie emojis which results in the correct number of cards being generated.
+
 
