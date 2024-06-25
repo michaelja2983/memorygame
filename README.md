@@ -103,5 +103,15 @@ This project is licensed under the MIT License. See `LICENSE` for details.
 
 ## Running Tests
 
+### Validation
+
+When validated through HTML, CSS and JavaScript validators the code performs well with no apparant issues;
+
+![HTML Validator](/assets/images/HTML%20validator.JPG)
+[CSS Validator](/assets/images/css%20validation.JPG)
+
+* Primary color: `#88498F`
+* Secondary color: `#E0CBA8`
+* Background color: `779FA1`
 
 
